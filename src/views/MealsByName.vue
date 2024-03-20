@@ -9,27 +9,7 @@
 		/>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
-		<div
-			v-for="meal of meals"
-			:key="meal.idMeal"
-			class="bg-white shadow rounded-xl"
-		>
-			<router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
-				<img
-					:src="meal.strMealThumb"
-					:alt="meal.strMeal"
-					class="w-full h-48 object-cover rounded-t-xl"
-				/>
-				<div class="p-3">
-					<h3 class="font-semibold">{{ meal.strMeal }}</h3>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
-						minima unde perspiciatis eius impedit harum architecto dolorum?
-						Velit porro unde libero, asperiores magnam
-					</p>
-				</div>
-			</router-link>
-		</div>
+		<MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
 	</div>
 </template>
 
@@ -38,6 +18,7 @@ import { computed } from '@vue/reactivity';
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import store from '../store';
+import MealItem from '../components/MealItem.vue';
 
 const route = useRoute();
 const keyword = ref('');
