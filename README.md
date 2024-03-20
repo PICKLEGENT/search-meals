@@ -1,7 +1,28 @@
-# Vue 3 + Vite
+# Receipt Search App - Vue 3 + Tailwind CSS + API
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Receipt Search app built with Vue.js + API
 
-## Recommended IDE Setup
+### Screenshots
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Getting Started
+
+- Clone repository and `cd` into it
+- Create `.env` in sourse folder
+- In the `.env` file, paste the as follows:
+
+```text
+VITE_API_BASE_URL = https://www.themealdb.com/api/json/v1/1/
+```
+
+- Install the dependencies and run the dev server
+
+```bash
+npm i
+npm run dev
+```
+
+- Open [localhost:3000](http://localhost:3000) to view the app in the browser
+
+## Resources
+
+- [TheMealDb](https://www.themealdb.com/)
