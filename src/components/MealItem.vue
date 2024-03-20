@@ -1,18 +1,16 @@
 <template>
-	<div class="bg-white shadow rounded-xl">
+	<div class="bg-white shadow rounded-xl hover:scale-105 transition-all">
 		<router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
 			<img
 				:src="meal.strMealThumb"
 				:alt="meal.strMeal"
-				class="w-full h-48 object-cover rounded-t-xl"
+				class="rounded-t-xl w-full h-48 object-cover"
 			/>
 		</router-link>
 		<div class="p-3">
-			<h3 class="font-semibold">{{ meal.strMeal }}</h3>
-			<p>
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi minima
-				unde perspiciatis eius impedit harum architecto dolorum? Velit porro
-				unde libero, asperiores magnam
+			<h3 class="font-bold">{{ meal.strMeal }}</h3>
+			<p class="mb-4">
+				{{ $filters.truncateWords(meal.strInstructions, 20) }}
 			</p>
 		</div>
 	</div>
@@ -21,7 +19,7 @@
 <script setup>
 const { meal } = defineProps({
 	meal: {
-		require: true,
+		required: true,
 		type: Object,
 	},
 });

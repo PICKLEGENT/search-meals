@@ -1,4 +1,4 @@
-import axiosClient from '../axiosClient.js';
+import axiosClient from '../axiosClient';
 
 export function searchMeals({ commit }, keyword) {
     axiosClient.get(`search.php?s=${keyword}`)
@@ -14,9 +14,9 @@ export function searchMealsByLetter({ commit }, letter) {
         })
 }
 
-export function searchMealsByIngredient({ commit }, ingredient) {
-    axiosClient.get(`search.php?i=${ingredient}`)
+export function searchMealsByIngredient({ commit }, ing) {
+    axiosClient.get(`filter.php?i=${ing}`)
         .then(({ data }) => {
-            commit('setMealsByIngredient', data.meals)
+            commit('setMealsByIngredients', data.meals)
         })
 }
