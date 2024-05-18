@@ -1,23 +1,29 @@
 <template>
-	<div class="p-8 pb-0">
-		<h1 class="text-4xl font-bold mb-4 text-orange-500">Ingredients</h1>
+	<div>
+		<h1
+			class="px-3 py-2 w-fit font-bold text-5xl border-2 border-red-600 rounded-xl"
+		>
+			Ingredients
+		</h1>
 	</div>
-	<div class="px-8">
-		<input
-			type="text"
-			v-model="keyword"
-			class="rounded border-2 bg-white border-gray-200 focus:ring-orange-500 focus:border-orange-500 mb-3 w-full"
-			placeholder="Search for Ingredients"
-		/>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+	<div class="mt-6">
+		<div class="flex justify-center items-center">
+			<input
+				type="text"
+				v-model="keyword"
+				class="w-full lg:w-[600px] border-2 border-gray-200 bg-white rounded-xl"
+				placeholder="Search for Ingredients"
+			/>
+		</div>
+		<div class="mt-12 grid grid-cols-1 md:grid-cols-4 gap-4">
 			<a
 				href="#"
 				@click.prevent="openIngredient(ingredient)"
 				v-for="ingredient of computedIngredients"
 				:key="ingredient.idIngredient"
-				class="block bg-white rounded p-3 mb-3 shadow"
+				class="block p-2 font-bold text-3xl bg-neutral-100 hover:text-red-600 transition-colors rounded-xl shadow"
 			>
-				<h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
+				{{ ingredient.strIngredient }}
 			</a>
 		</div>
 	</div>

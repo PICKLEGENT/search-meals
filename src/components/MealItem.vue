@@ -1,15 +1,17 @@
 <template>
-	<div class="bg-white shadow rounded-xl hover:scale-105 transition-all">
+	<div
+		class="bg-neutral-100 rounded-xl shadow hover:scale-105 transition-all overflow-hidden"
+	>
 		<router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
 			<img
 				:src="meal.strMealThumb"
 				:alt="meal.strMeal"
-				class="rounded-t-xl w-full h-48 object-cover"
+				class="w-full h-48 object-cover"
 			/>
 		</router-link>
 		<div class="p-3">
-			<h3 class="font-bold">{{ meal.strMeal }}</h3>
-			<p class="mb-4">
+			<h3 class="font-bold text-xl">{{ meal.strMeal }}</h3>
+			<p class="mt-6 text-lg">
 				{{ $filters.truncateWords(meal.strInstructions, 20) }}
 			</p>
 		</div>

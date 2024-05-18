@@ -1,51 +1,66 @@
 <template>
-	<div class="max-w-[800px] mx-auto p-8">
-		<h1 class="text-4xl font-bold mb-5 text-orange-500">{{ meal.strMeal }}</h1>
-		<img :src="meal.strMealThumb" :alt="meal.strMeal" class="max-w-[100%]" />
-		<div class="grid grid-cols-1 sm:grid-cols-3 text-lg py-2">
-			<div>
-				<strong class="font-bold">Category:</strong> {{ meal.strCategory }}
+	<h1
+		class="px-3 py-2 w-fit font-bold text-5xl border-2 border-red-600 rounded-xl"
+	>
+		{{ meal.strMeal }}
+	</h1>
+	<div class="flex gap-x-8 mt-12">
+		<img
+			:src="meal.strMealThumb"
+			:alt="meal.strMeal"
+			class="max-w-[100%] object-cover"
+		/>
+		<section>
+			<div class="flex justify-between items-center text-xl">
+				<div class="flex items-center gap-x-4">
+					<h3 class="font-bold text-2xl">Category:</h3>
+					{{ meal.strCategory }}
+				</div>
+				<div class="flex items-center gap-x-4">
+					<h3 class="font-bold text-2xl">Area:</h3>
+					{{ meal.strArea }}
+				</div>
+				<div class="flex items-center gap-x-4">
+					<h3 class="font-bold text-2xl">Tags:</h3>
+					{{ meal.strTags }}
+				</div>
 			</div>
-			<div><strong class="font-bold">Area:</strong> {{ meal.strArea }}</div>
-			<div><strong class="font-bold">Tags:</strong> {{ meal.strTags }}</div>
-		</div>
-
-		<div class="my-3">
-			{{ meal.strInstructions }}
-		</div>
-
-		<div class="grid grid-cols-1 sm:grid-cols-2">
-			<div>
-				<h2 class="text-2xl font-semibold mb-2">Ingredients</h2>
-				<ul>
-					<template v-for="(el, ind) of new Array(20)">
-						<li v-if="meal[`strIngredient${ind + 1}`]">
-							{{ ind + 1 }}. {{ meal[`strIngredient${ind + 1}`] }}
-						</li>
-					</template>
-				</ul>
+			<div class="mt-6 leading-relaxed text-lg">
+				{{ meal.strInstructions }}
 			</div>
-			<div>
-				<h2 class="text-2xl font-semibold mb-2">Measures</h2>
-				<ul>
-					<template v-for="(el, ind) of new Array(20)">
-						<li v-if="meal[`strMeasure${ind + 1}`]">
-							{{ ind + 1 }}. {{ meal[`strMeasure${ind + 1}`] }}
-						</li>
-					</template>
-				</ul>
+			<div class="flex gap-x-8 mt-6">
+				<div>
+					<h2 class="font-semibold text-3xl">Ingredients</h2>
+					<ul class="mt-3 text-xl">
+						<template v-for="(el, ind) of new Array(20)">
+							<li v-if="meal[`strIngredient${ind + 1}`]">
+								{{ ind + 1 }}. {{ meal[`strIngredient${ind + 1}`] }}:
+							</li>
+						</template>
+					</ul>
+				</div>
+				<div>
+					<h2 class="font-semibold text-3xl">Measures</h2>
+					<ul class="mt-3 text-xl">
+						<template v-for="(el, ind) of new Array(20)">
+							<li v-if="meal[`strMeasure${ind + 1}`]">
+								{{ meal[`strMeasure${ind + 1}`] }}
+							</li>
+						</template>
+					</ul>
+				</div>
 			</div>
-			<div class="mt-4">
+			<div class="flex justify-start items-center gap-x-8 mt-6">
 				<YouTubeButton :href="meal.strYoutube" />
 				<a
 					:href="meal.strSource"
 					target="_blank"
-					class="ml-3 px-3 py-2 rounded border-2 border-transparent text-indigo-600 transition-colors"
+					class="text-xl text-indigo-600"
 				>
 					View Original Source
 				</a>
 			</div>
-		</div>
+		</section>
 	</div>
 </template>
 

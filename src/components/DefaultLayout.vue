@@ -1,7 +1,7 @@
 <template>
 	<navbar />
 	<main>
-		<div class="max-w-[1200px] mx-auto">
+		<div class="p-8 tracking-wider">
 			<router-view />
 		</div>
 	</main>

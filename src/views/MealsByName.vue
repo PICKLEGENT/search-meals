@@ -1,12 +1,14 @@
 <template>
-	<div class="p-8 pb-0">
-		<h1 class="text-4xl font-bold mb-4 text-orange-500">Search Meals</h1>
-	</div>
-	<div class="px-8 pb-3">
+	<h1
+		class="px-3 py-2 w-fit font-bold text-5xl border-2 border-red-600 rounded-xl"
+	>
+		Search Meals
+	</h1>
+	<div class="flex justify-center items-center mt-12">
 		<input
 			type="text"
 			v-model="keyword"
-			class="rounded border-2 bg-white border-gray-200 focus:ring-orange-500 focus:border-orange-500 w-full"
+			class="w-full lg:w-[600px] border-2 border-gray-200 bg-white rounded-xl"
 			placeholder="Search for Meals"
 			@change="searchMeals"
 		/>
