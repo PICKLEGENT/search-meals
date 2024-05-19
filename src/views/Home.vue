@@ -1,6 +1,6 @@
 <template>
 	<h1
-		class="px-3 py-2 w-fit font-bold text-5xl border-2 border-red-600 rounded-xl"
+		class="px-3 py-2 w-full lg:w-fit text-center text-2xl lg:text-5xl border-2 border-red-600 rounded-xl"
 	>
 		You might like it
 	</h1>

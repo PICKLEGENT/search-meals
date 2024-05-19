@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1
-			class="px-3 py-2 w-fit font-bold text-5xl border-2 border-red-600 rounded-xl"
+			class="px-3 py-2 w-full lg:w-fit text-center text-2xl lg:text-5xl border-2 border-red-600 rounded-xl"
 		>
 			Ingredients
 		</h1>
@@ -15,13 +15,13 @@
 				placeholder="Search for Ingredients"
 			/>
 		</div>
-		<div class="mt-12 grid grid-cols-1 md:grid-cols-4 gap-4">
+		<div class="mt-6 lg:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
 			<a
 				href="#"
 				@click.prevent="openIngredient(ingredient)"
 				v-for="ingredient of computedIngredients"
 				:key="ingredient.idIngredient"
-				class="block p-2 font-bold text-3xl bg-neutral-100 hover:text-red-600 transition-colors rounded-xl shadow"
+				class="block p-2 text-xl lg:text-3xl bg-neutral-100 hover:text-red-600 transition-colors rounded-xl shadow"
 			>
 				{{ ingredient.strIngredient }}
 			</a>

@@ -10,8 +10,8 @@
 			/>
 		</router-link>
 		<div class="p-3">
-			<h3 class="font-bold text-xl">{{ meal.strMeal }}</h3>
-			<p class="mt-6 text-lg">
+			<h3 class="text-2xl">{{ meal.strMeal }}</h3>
+			<p v-if="meal.strInstructions" class="mt-3 text-xl">
 				{{ $filters.truncateWords(meal.strInstructions, 20) }}
 			</p>
 		</div>
