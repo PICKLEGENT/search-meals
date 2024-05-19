@@ -1,6 +1,6 @@
 <template>
 	<footer
-		class="px-4 lg:px-8 py-4 bg-white shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1),0_-4px_6px_-4px_rgba(0,0,0,0.1)] rounded-t-xl"
+		class="hidden lg:block px-4 lg:px-8 py-4 bg-white shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1),0_-4px_6px_-4px_rgba(0,0,0,0.1)] rounded-t-xl"
 	>
 		<div class="flex justify-between">
 			<div>
