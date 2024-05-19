@@ -12,7 +12,7 @@
 		</div>
 		<navbar v-bind="props" />
 	</header>
-	<header class="lg:hidden h-10">
+	<header class="lg:hidden relative h-10">
 		<button
 			@click="openMenu()"
 			class="menu absolute right-3 flex lg:hidden z-10"
