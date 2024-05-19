@@ -1,5 +1,5 @@
 <template>
-	<div class="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-6 lg:mt-12">
+	<div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-6 lg:mt-12">
 		<MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
 	</div>
 	<div

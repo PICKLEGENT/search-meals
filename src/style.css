@@ -89,3 +89,9 @@ footer a {
 	stroke-dashoffset: -134;
 	stroke-width: 6;
 }
+
+@media (min-width: 1921px) {
+	.meal-item__img {
+		height: 400px;
+	}
+}

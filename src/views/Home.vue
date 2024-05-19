@@ -15,7 +15,7 @@ import axiosClient from '../axiosClient.js';
 const meals = ref([]);
 
 onMounted(async () => {
-	for (let i = 0; i < 10; i++) {
+	for (let i = 0; i < 16; i++) {
 		axiosClient
 			.get(`random.php`)
 			.then(({ data }) => meals.value.push(data.meals[0]));
