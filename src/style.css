@@ -38,6 +38,10 @@ a {
 	font-family: 'Poetsen One', sans-serif;
 }
 
+footer a {
+	font-family: 'Nunito', sans-serif;
+}
+
 .menu {
 	background-color: transparent;
 	cursor: pointer;

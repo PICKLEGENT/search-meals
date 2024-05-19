@@ -1,13 +1,15 @@
-# Receipt Search App - Vue 3 + Tailwind CSS + API
+# Recipes Search App - Vue 3
 
-Receipt Search app built with Vue.js + API
+Recipes Search app built with Vue 3 + Tailwind CSS + API + Vite
 
 ### Screenshots
+
+<img src='search-meals.png' alt='screenshot' width='1000'>
 
 ## Getting Started
 
 - Clone repository and `cd` into it
-- Create `.env` in sourse folder
+- Create `.env` in source folder
 - In the `.env` file, paste the as follows:
 
 ```text

@@ -43,6 +43,4 @@ const props = defineProps({
 	open: Object,
 	openMenu: Function,
 });
-
-console.log(props.open.value);
 </script>

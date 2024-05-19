@@ -1,6 +1,6 @@
 <template>
 	<header
-		class="hidden lg:flex justify-between items-center px-4 lg:px-8 py-4 bg-white shadow-lg tracking-wider"
+		class="hidden lg:flex justify-between items-center px-4 lg:px-8 py-4 tracking-wider bg-white shadow-lg rounded-b-xl"
 	>
 		<div class="flex justify-between items-center relative">
 			<router-link
